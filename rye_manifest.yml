@@ -1,0 +1,8 @@
+applications:
+- name: rye
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  routes:
+  - route: rye.cfapps.io
+  stack: cflinuxfs2
