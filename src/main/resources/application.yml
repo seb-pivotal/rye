@@ -1,4 +1,4 @@
 redis:
-  host: ${vcap.services.ricola.hostname}
-  port: ${vcap.services.ricola.port}
-  auth: ${vcap.services.ricola.password}
+  host: ${vcap.services.ricola.credentials.hostname}
+  port: ${vcap.services.ricola.credentials.port}
+  auth: ${vcap.services.ricola.credentials.password}
