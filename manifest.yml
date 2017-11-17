@@ -5,4 +5,6 @@ applications:
   memory: 1G
   routes:
   - route: rye.cfapps.io
+  services:
+    - ricola
   stack: cflinuxfs2
