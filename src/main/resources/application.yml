@@ -1,2 +1,4 @@
-barrel:
-  inscription: blammo
+redis:
+  host: ${vcap.services.ricola.hostname}
+  port: ${vcap.services.ricola.port}
+  auth: ${vcap.services.ricola.password}
