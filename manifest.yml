@@ -3,8 +3,8 @@ applications:
   disk_quota: 1G
   instances: 1
   memory: 1G
-  routes:
-  - route: rye.cfapps.io
+  buildpack: java_buildpack
+  path: build/libs/rye.jar
   services:
     - ricola
   stack: cflinuxfs2
