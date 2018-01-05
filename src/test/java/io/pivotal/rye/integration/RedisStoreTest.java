@@ -1,6 +1,7 @@
 package io.pivotal.rye.integration;
 
 import io.pivotal.rye.RyeApplicationBaseTest;
+import io.pivotal.rye.config.RedisConnectionConfig;
 import io.pivotal.rye.data.RedisStore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

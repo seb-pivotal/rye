@@ -1,6 +1,7 @@
 package io.pivotal.rye.data;
 
-import org.springframework.beans.factory.annotation.Value;
+import io.pivotal.rye.config.RedisConnectionConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisShardInfo;
@@ -10,13 +11,12 @@ public class RedisStore {
     Jedis jedis;
 
     public RedisStore(
-            @Value("${redis.host}") String host,
-            @Value("${redis.port}") int port,
-            @Value("${redis.auth}") String password)
+            @Autowired RedisConnectionConfig config
+            )
     {
-        JedisShardInfo shardInfo = new JedisShardInfo(host, port);
-        if(!"".equals(password)) {
-            shardInfo.setPassword(password);
+        JedisShardInfo shardInfo = new JedisShardInfo(config.host, config.port);
+        if(!"".equals(config.auth)) {
+            shardInfo.setPassword(config.auth);
         }
         jedis = new Jedis(shardInfo);
     }

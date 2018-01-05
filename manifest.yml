@@ -3,7 +3,7 @@ applications:
   disk_quota: 1G
   instances: 1
   memory: 1G
-  buildpack: java_buildpack
+  buildpack: java_buildpack_offline
   path: build/libs/rye.jar
   services:
     - ricola
